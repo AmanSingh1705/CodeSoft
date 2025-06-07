@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emerging IoT Technologies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        accent: '#8B5CF6'
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce-slow': 'bounce 3s infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(100px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(45deg, #3B82F6, #8B5CF6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .stat-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold gradient-text">IoT Future</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#overview" class="hover:text-primary transition-colors">Overview</a>
+                    <a href="#technologies" class="hover:text-primary transition-colors">Technologies</a>
+                    <a href="#analytics" class="hover:text-primary transition-colors">Analytics</a>
+                    <a href="#applications" class="hover:text-primary transition-colors">Applications</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="overview" class="pt-24 pb-12 md:pt-32 md:pb-24">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 animate-slide-up">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">The Future of IoT Technology</h1>
+                    <p class="text-xl text-gray-600 mb-8">Discover how emerging IoT technologies are transforming industries and creating a more connected world.</p>
+                    <div class="flex space-x-4">
+                        <a href="#technologies" class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-opacity-90 transition-all duration-300">Explore Now</a>
+                        <a href="#analytics" class="border-2 border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary hover:text-white transition-all duration-300">View Analytics</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center animate-float">
+                    <img src="iot-isometric-color-illustration-vector.jpg" alt="IoT Illustration" class="w-full max-w-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">Emerging Technologies</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- AI & ML Card -->
+                <div class="card-hover bg-white rounded-xl p-6 shadow-lg">
+                    <div class="text-4xl text-primary mb-4"><i class="fas fa-brain"></i></div>
+                    <h3 class="text-xl font-bold mb-4">AI & Machine Learning</h3>
+                    <p class="text-gray-600">Intelligent systems that learn and adapt, revolutionizing IoT data processing and decision-making.</p>
+                </div>
+                
+                <!-- Edge Computing Card -->
+                <div class="card-hover bg-white rounded-xl p-6 shadow-lg">
+                    <div class="text-4xl text-secondary mb-4"><i class="fas fa-microchip"></i></div>
+                    <h3 class="text-xl font-bold mb-4">Edge Computing</h3>
+                    <p class="text-gray-600">Process data closer to the source, reducing latency and improving real-time responses.</p>
+                </div>
+                
+                <!-- 5G Integration Card -->
+                <div class="card-hover bg-white rounded-xl p-6 shadow-lg">
+                    <div class="text-4xl text-accent mb-4"><i class="fas fa-broadcast-tower"></i></div>
+                    <h3 class="text-xl font-bold mb-4">5G Integration</h3>
+                    <p class="text-gray-600">Ultra-fast connectivity enabling new possibilities in IoT applications and services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analytics Section -->
+    <section id="analytics" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">IoT Analytics & Insights</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Growth Chart -->
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-bold mb-4">IoT Market Growth</h3>
+                    <canvas id="growthChart" width="400" height="300"></canvas>
+                </div>
+                
+                <!-- Statistics Cards -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="stat-card bg-primary text-white rounded-xl p-6">
+                        <h4 class="text-lg font-semibold">Connected Devices</h4>
+                        <p class="text-3xl font-bold">75B+</p>
+                        <p class="text-sm opacity-80">Expected by 2025</p>
+                    </div>
+                    <div class="stat-card bg-secondary text-white rounded-xl p-6">
+                        <h4 class="text-lg font-semibold">Market Value</h4>
+                        <p class="text-3xl font-bold">$1.6T</p>
+                        <p class="text-sm opacity-80">Projected by 2025</p>
+                    </div>
+                    <div class="stat-card bg-accent text-white rounded-xl p-6">
+                        <h4 class="text-lg font-semibold">Data Generated</h4>
+                        <p class="text-3xl font-bold">79.4 ZB</p>
+                        <p class="text-sm opacity-80">Annual by 2025</p>
+                    </div>
+                    <div class="stat-card bg-gray-800 text-white rounded-xl p-6">
+                        <h4 class="text-lg font-semibold">Industry Growth</h4>
+                        <p class="text-3xl font-bold">26.9%</p>
+                        <p class="text-sm opacity-80">CAGR 2022-2027</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section id="applications" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">Real-World Applications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Smart Cities -->
+                <div class="card-hover bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="FutureofSmart.jpg" alt="Smart Cities" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Smart Cities</h3>
+                        <p class="text-gray-600">Intelligent urban infrastructure for better living.</p>
+                    </div>
+                </div>
+                
+                <!-- Healthcare -->
+                <div class="card-hover bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="10-helthcare-iot-examples-asimily.png" alt="Healthcare" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Healthcare</h3>
+                        <p class="text-gray-600">Remote monitoring and smart medical devices.</p>
+                    </div>
+                </div>
+                
+                <!-- Agriculture -->
+                <div class="card-hover bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="iot-agriculture-1.jpg" alt="Agriculture" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Agriculture</h3>
+                        <p class="text-gray-600">Precision farming and crop monitoring.</p>
+                    </div>
+                </div>
+                
+                <!-- Manufacturing -->
+                <div class="card-hover bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="IoT-in-Manufacturing-Industry-scaled.webp" alt="Manufacturing" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Manufacturing</h3>
+                        <p class="text-gray-600">Smart factories and predictive maintenance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">IoT Future</h3>
+                    <p class="text-gray-400">Exploring the future of connected technology.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#overview" class="text-gray-400 hover:text-white transition-colors">Overview</a></li>
+                        <li><a href="#technologies" class="text-gray-400 hover:text-white transition-colors">Technologies</a></li>
+                        <li><a href="#analytics" class="text-gray-400 hover:text-white transition-colors">Analytics</a></li>
+                        <li><a href="#applications" class="text-gray-400 hover:text-white transition-colors">Applications</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Documentation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Research</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/aman17.05singh/" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/aman-kumar-singh-20612535a/" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/AmanSingh1705" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 IoT Future. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Growth Chart
+        const ctx = document.getElementById('growthChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
+                datasets: [{
+                    label: 'IoT Market Size (Billion USD)',
+                    data: [308.5, 384.7, 478.4, 566.4, 650.2, 750.5],
+                    borderColor: '#3B82F6',
+                    tension: 0.4,
+                    fill: true,
+                    backgroundColor: 'rgba(59, 130, 246, 0.1)'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section > div').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
