@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman Kumar Singh | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                    primary: {
+                        light: '#4F46E5'
+                    }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'bounce-subtle': 'bounceSubtle 2s infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-glow': 'pulseGlow 2s infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        bounceSubtle: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+                            '50%': { opacity: '0.8', transform: 'scale(1.05)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/css">
+        .custom-shape-divider-bottom-1687542608 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+
+        .custom-shape-divider-bottom-1687542608 svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 100px;
+        }
+
+        .custom-shape-divider-bottom-1687542608 .shape-fill {
+            fill: #FFFFFF;
+        }
+
+
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .project-overlay {
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: currentColor;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            transform: translateY(-2px);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .active::after {
+            width: 100%;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.5);
+        }
+
+        .dark input:focus, .dark textarea:focus {
+            box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.5);
+        }
+
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #7C3AED;
+        }
+        
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #7C3AED;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-primary-light">Aman Kumar Singh</a>
+                
+                <div class="flex items-center space-x-8">
+                    <nav class="hidden md:flex space-x-8 animate-fade-in">
+                        <a href="#home" class="nav-link active">Home</a>
+                        <a href="#projects" class="nav-link">Projects</a>
+                        <a href="#about" class="nav-link">About</a>
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </nav>
+                    
+
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-dark-800 shadow-lg">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center relative overflow-hidden pt-20">
+        <div class="custom-shape-divider-bottom-1687542608">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        
+        <div class="container mx-auto px-6 py-20 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0 animate-fade-in hover:animate-pulse-glow transition-all duration-300">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    Hi, I'm <span class="text-primary-light dark:text-primary-dark">Aman Kumar Singh</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-800">
+                    Java Developer
+                </h2>
+                <p class="text-lg mb-8 text-gray-800 max-w-lg">
+                    I build exceptional digital experiences that are fast, accessible, and visually appealing. 
+                    Passionate about creating solutions that make an impact.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#projects" class="px-6 py-3 bg-primary-light dark:bg-primary-dark text-white rounded-lg font-medium hover:bg-opacity-90 transition-all duration-300 shadow-lg">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="px-6 py-3 border-2 border-primary-light dark:border-primary-dark text-primary-light dark:text-primary-dark rounded-lg font-medium hover:bg-primary-light hover:bg-opacity-10 transition-all duration-300">
+                        Contact Me
+                    </a>
+                </div>
+                <div class="mt-8 flex space-x-4">
+                    <a href="https://github.com/AmanSingh1705" class="text-gray-600 hover:text-primary-light transform hover:scale-125 transition-all duration-300">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aman-kumar-singh-20612535a/" class="text-gray-600 hover:text-primary-light transform hover:scale-125 transition-all duration-300">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/aman17.05singh/" class="text-gray-600 hover:text-primary-light transform hover:scale-125 transition-all duration-300">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center animate-float">
+                <div class="relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-primary-light dark:bg-primary-dark opacity-20 absolute -z-10 top-6 left-6"></div>
+                    <img src="WhatsApp_Image_2025-06-05_at_13.05.00_dc86f630-removebg-preview.png" 
+                         alt="Aman Kumar Singh" 
+                         class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-white dark:border-dark-800 shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
+                <div class="w-20 h-1 bg-primary-light dark:bg-primary-dark mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto text-gray-800">
+                    Here are some of my recent projects. Each one was built with a focus on performance, accessibility, and user experience.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-bounce-subtle">
+                    <div class="relative">
+                        <img src="2025-06-05 (4).png"
+                             alt="Portfolio" 
+                             class="w-full h-48 object-cover">
+                        <div class="project-overlay absolute inset-0 bg-primary-light bg-opacity-90 flex flex-col justify-center items-center p-4 text-white">
+                            <h3 class="text-xl font-bold mb-2">Portfolio website</h3>
+                            <p class="text-center mb-4">A unique platform that allows you to showcase your work and tell others about yourself.
+                            </p>
+                            <div class="flex space-x-2">
+                                    <span class="px-2 py-1 bg-white text-primary-light rounded text-sm">Html</span>
+                                <span class="px-2 py-1 bg-white text-primary-light rounded text-sm">Css</span>
+                                <span class="px-2 py-1 bg-white text-primary-light rounded text-sm">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Portfolio website</h3>
+                        <p class="text-gray-800 mb-4">A unique platform that allows you to showcase your work and tell others about yourself.
+                        </p>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-primary-light font-medium relative group"><span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary-light group-hover:w-full transition-all duration-300"></span>View Project</a>
+                            <a href="" class="text-gray-600 hover:text-primary-light">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-bounce-subtle">
+                    <div class="relative">
+                        <img src="579ed270-9231-4782-830d-bcca23f15d69-cover.png" 
+                             alt="Calculator" 
+                             class="w-full h-48 object-cover">
+                        <div class="project-overlay absolute inset-0 bg-primary-light bg-opacity-90 flex flex-col justify-center items-center p-4 text-white">
+                            <h3 class="text-xl font-bold mb-2">Calculator</h3>
+                            <p class="text-center mb-4">A machine which allows people to do math operations more easily</p>
+                            <div class="flex space-x-2">
+                                <span class="px-2 py-1 bg-white text-primary-light rounded text-sm">Html</span>
+                                <span class="px-2 py-1 bg-white text-primary-light rounded text-sm">Css</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Calculator</h3>
+                        <p class="text-gray-800 mb-4">A machine which allows people to do math operations more easily</p>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-primary-light font-medium relative group"><span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary-light group-hover:w-full transition-all duration-300"></span>View Project</a>
+                            <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-bounce-subtle">
+                    <div class="relative">
+                        <img src="bigstock_Internet_Of_Things__Iot_Conce_413663834.6165ebd7685e3.avif" 
+                             alt="IoT Landing page" 
+                             class="w-full h-48 object-cover">
+                        <div class="project-overlay absolute inset-0 bg-primary-light bg-opacity-90 flex flex-col justify-center items-center p-4 text-white">
+                            <h3 class="text-xl font-bold mb-2">IoT Landing page</h3>
+                            <p class="text-center mb-4">Discover how emerging IoT technologies are transforming industries and creating a more connected world.</p>
+                            <div class="flex space-x-2">
+                                <span class="px-2 py-1 bg-white text-primary-light rounded text-sm">Html</span>
+                                <span class="px-2 py-1 bg-white text-primary-light rounded text-sm">Css</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">IoT Landing page</h3>
+                        <p class="text-gray-800 mb-4">Discover how emerging IoT technologies are transforming industries and creating a more connected world.</p>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-primary-light font-medium relative group"><span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary-light group-hover:w-full transition-all duration-300"></span>View Project</a>
+                            <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block px-6 py-3 border-2 border-primary-light dark:border-primary-dark text-primary-light dark:text-primary-dark rounded-lg font-medium hover:bg-primary-light hover:bg-opacity-10 transition-all duration-300">
+                    View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-primary-light dark:bg-primary-dark mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto text-gray-800">
+                    Get to know more about my background, skills, and what drives me in my work.
+                </p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 rounded-full bg-primary-light dark:bg-primary-dark opacity-20 absolute -z-10 top-4 left-4"></div>
+                        <img src="WhatsApp Image 2025-06-05 at 13.05.00_10aa9217.jpg" 
+                             alt="Aman Kumar Singh" 
+                             class="w-64 h-64 rounded-full object-cover border-4 border-white shadow-lg">
+                    </div>
+                </div>
+                
+                <div class="md:w-2/3 md:pl-12">
+                    <h3 class="text-2xl font-bold mb-6">Who I Am</h3>
+                    <p class="text-gray-800 mb-6">
+                        I am Aman Kumar Singh , a passionate software developer with a strong background in computer science and a keen interest in Java development and web development.
+                    </p>
+                    <p class="text-gray-800 mb-6">
+                        When I'm not coding, you can find me hiking in the mountains, reading sci-fi novels, or experimenting with new 
+                        cooking recipes. I believe in continuous learning and pushing the boundaries of what's possible with technology.
+                    </p>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-xl font-semibold mb-4">My Skills</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-3 py-1 bg-gray-200 rounded-full text-sm hover:bg-primary-light hover:text-white transform hover:scale-110 transition-all duration-300">Java</span>
+                            <span class="px-3 py-1 bg-gray-200 rounded-full text-sm hover:bg-primary-light hover:text-white transform hover:scale-110 transition-all duration-300">Mysql</span>
+                            <span class="px-3 py-1 bg-gray-200 rounded-full text-sm hover:bg-primary-light hover:text-white transform hover:scale-110 transition-all duration-300">C</span>
+                            <span class="px-3 py-1 bg-gray-200 rounded-full text-sm hover:bg-primary-light hover:text-white transform hover:scale-110 transition-all duration-300">Python</span>
+                            <span class="px-3 py-1 bg-gray-200 rounded-full text-sm hover:bg-primary-light hover:text-white transform hover:scale-110 transition-all duration-300">Html</span>
+                            <span class="px-3 py-1 bg-gray-200 rounded-full text-sm hover:bg-primary-light hover:text-white transform hover:scale-110 transition-all duration-300">Css</span>
+                        </div>
+                    </div>
+                    
+                    <a href="Aman KumarSingh_InternshalaResume.pdf" class="inline-block px-6 py-3 bg-primary-light text-white rounded-lg font-medium hover:bg-opacity-90 transition-all duration-300 shadow-lg">
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                <div class="w-20 h-1 bg-primary-light dark:bg-primary-dark mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto text-gray-800">
+                    Have a project in mind or want to discuss potential opportunities? Feel free to reach out!
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition-all duration-300 animate-fade-in">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8 md:p-12 bg-primary-light text-white">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold">Email</h4>
+                                    <p>rajat.singh.8910@gmail.com.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-phone mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold">Phone</h4>
+                                    <p>+91 91208 16364</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold">Location</h4>
+                                    <p>Greater Noida, India</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-12">
+                            <h4 class="font-semibold mb-4">Follow Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/AmanSingh1705" class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 hover:scale-110 transform transition-all duration-300 animate-bounce-subtle">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/aman-kumar-singh-20612535a/" class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors duration-300">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                </a>
+                                <a href="https://www.instagram.com/aman17.05singh/" class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-black-000 mb-1">Full Name</label>
+                                <input type="text" id="name" name="name" required 
+                                       class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-dark-800 focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark transition-all duration-300">
+                                <p id="name-error" class="text-red-500 text-sm mt-1 hidden"></p>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-black-300 mb-1">Email Address</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-dark-800 focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark transition-all duration-300">
+                                <p id="email-error" class="text-red-500 text-sm mt-1 hidden"></p>
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-black-300 mb-1">Subject</label>
+                                <input type="text" id="subject" name="subject" required 
+                                       class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-dark-800 focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark transition-all duration-300">
+                                <p id="subject-error" class="text-red-500 text-sm mt-1 hidden"></p>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 dark:text-black-300 mb-1">Message</label>
+                                <textarea id="message" name="message" rows="4" required 
+                                          class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-dark-800 focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark transition-all duration-300"></textarea>
+                                <p id="message-error" class="text-red-500 text-sm mt-1 hidden"></p>
+                            </div>
+                            
+                            <button type="submit" class="w-full px-6 py-3 bg-primary-light dark:bg-primary-dark text-white rounded-lg font-medium hover:bg-opacity-90 transition-all duration-300 shadow-lg">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center bg-gray-900 text-white p-6 rounded-lg shadow-xl">
+                <p class="text-lg font-medium">&copy; 2025 Aman Kumar Singh. All rights reserved.</p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="#" class="text-gray-300 hover:text-primary-light transform hover:scale-105 transition-all duration-300 font-medium">Privacy Policy</a>
+                    <a href="#" class="text-gray-300 hover:text-primary-light transform hover:scale-105 transition-all duration-300 font-medium">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary-light dark:bg-primary-dark text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Dark mode toggle
+        const toggle = document.getElementById('toggle');
+        const html = document.documentElement;
+        
+        // Check for saved user preference, if any, on load of the website
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            html.classList.add('dark');
+            toggle.checked = true;
+        }
+        
+        toggle.addEventListener('change', function() {
+            if (this.checked) {
+                html.classList.add('dark');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                html.classList.remove('dark');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all links
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+                
+                // Add active class to clicked link
+                this.classList.add('active');
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Update active link on scroll
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY + 100;
+            
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Form validation
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let isValid = true;
+            
+            // Validate name
+            const nameInput = document.getElementById('name');
+            const nameError = document.getElementById('name-error');
+            if (nameInput.value.trim() === '') {
+                nameError.textContent = 'Name is required';
+                nameError.classList.remove('hidden');
+                isValid = false;
+            } else {
+                nameError.classList.add('hidden');
+            }
+            
+            // Validate email
+            const emailInput = document.getElementById('email');
+            const emailError = document.getElementById('email-error');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (emailInput.value.trim() === '') {
+                emailError.textContent = 'Email is required';
+                emailError.classList.remove('hidden');
+                isValid = false;
+            } else if (!emailRegex.test(emailInput.value)) {
+                emailError.textContent = 'Please enter a valid email address';
+                emailError.classList.remove('hidden');
+                isValid = false;
+            } else {
+                emailError.classList.add('hidden');
+            }
+            
+            // Validate subject
+            const subjectInput = document.getElementById('subject');
+            const subjectError = document.getElementById('subject-error');
+            if (subjectInput.value.trim() === '') {
+                subjectError.textContent = 'Subject is required';
+                subjectError.classList.remove('hidden');
+                isValid = false;
+            } else {
+                subjectError.classList.add('hidden');
+            }
+            
+            // Validate message
+            const messageInput = document.getElementById('message');
+            const messageError = document.getElementById('message-error');
+            if (messageInput.value.trim() === '') {
+                messageError.textContent = 'Message is required';
+                messageError.classList.remove('hidden');
+                isValid = false;
+            } else {
+                messageError.classList.add('hidden');
+            }
+            
+            // If form is valid, submit it (in a real scenario, you would send it to a server)
+            if (isValid) {
+                alert('Thank you for your message! I will get back to you soon.');
+                contactForm.reset();
+            }
+        });
+        
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
